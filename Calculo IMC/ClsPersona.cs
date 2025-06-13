@@ -97,16 +97,16 @@ namespace Calculo_IMC
         }
         public string Datos()
         {
-            string mensaje="";
+            string Mensaje="";
             if (DistanciaFaltante < 0)
             {
-                mensaje = "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria() + " Km\nDistancia pendiente: " + DistanciaFaltante + " Km";
+                Mensaje = "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria() + " Km\nDistancia pendiente: " + DistanciaFaltante + " Km";
             }
             else
             {
-                mensaje = "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria() + " Km\nDistancia pendiente: Usted ha realizado la mínima diaria";
+                Mensaje = "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria() + " Km\nDistancia pendiente: Usted ha realizado la mínima diaria";
             }
-            return mensaje;
+            return Mensaje;
         }
     }
 }
