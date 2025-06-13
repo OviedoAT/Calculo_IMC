@@ -51,9 +51,11 @@
             // TxtBxEstatura
             // 
             this.TxtBxEstatura.Location = new System.Drawing.Point(118, 91);
+            this.TxtBxEstatura.MaxLength = 3;
             this.TxtBxEstatura.Name = "TxtBxEstatura";
             this.TxtBxEstatura.Size = new System.Drawing.Size(178, 20);
             this.TxtBxEstatura.TabIndex = 1;
+            this.TxtBxEstatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBxEstatura_KeyPress);
             // 
             // lblPeso
             // 
@@ -67,25 +69,29 @@
             // TxtBxPeso
             // 
             this.TxtBxPeso.Location = new System.Drawing.Point(118, 157);
+            this.TxtBxPeso.MaxLength = 5;
             this.TxtBxPeso.Name = "TxtBxPeso";
             this.TxtBxPeso.Size = new System.Drawing.Size(178, 20);
             this.TxtBxPeso.TabIndex = 3;
+            this.TxtBxPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBxPeso_KeyPress);
             // 
             // lblDistancia
             // 
             this.lblDistancia.AutoSize = true;
             this.lblDistancia.Location = new System.Drawing.Point(118, 210);
             this.lblDistancia.Name = "lblDistancia";
-            this.lblDistancia.Size = new System.Drawing.Size(223, 13);
+            this.lblDistancia.Size = new System.Drawing.Size(246, 13);
             this.lblDistancia.TabIndex = 4;
-            this.lblDistancia.Text = "Ingrese la distancia de su sancada en metros:";
+            this.lblDistancia.Text = "Ingrese la distancia de su sancada en centimetros:";
             // 
             // TxtBxSancada
             // 
             this.TxtBxSancada.Location = new System.Drawing.Point(118, 226);
+            this.TxtBxSancada.MaxLength = 4;
             this.TxtBxSancada.Name = "TxtBxSancada";
             this.TxtBxSancada.Size = new System.Drawing.Size(178, 20);
             this.TxtBxSancada.TabIndex = 5;
+            this.TxtBxSancada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBxSancada_KeyPress);
             // 
             // lblPasos
             // 
@@ -99,9 +105,11 @@
             // TxtBxPasos
             // 
             this.TxtBxPasos.Location = new System.Drawing.Point(118, 292);
+            this.TxtBxPasos.MaxLength = 6;
             this.TxtBxPasos.Name = "TxtBxPasos";
             this.TxtBxPasos.Size = new System.Drawing.Size(178, 20);
             this.TxtBxPasos.TabIndex = 7;
+            this.TxtBxPasos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBxPasos_KeyPress);
             // 
             // Mostrar
             // 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Calculo_IMC
 {
@@ -94,10 +95,18 @@ namespace Calculo_IMC
             }
             return "Bajo";
         }
-
         public string Datos()
         {
-            return "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria()+" Km\nDistancia pendiente: "+DistanciaFaltante+" Km";
+            string mensaje="";
+            if (DistanciaFaltante < 0)
+            {
+                mensaje = "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria() + " Km\nDistancia pendiente: " + DistanciaFaltante + " Km";
+            }
+            else
+            {
+                mensaje = "Tu IMC es de: " + CalcularIMC() + "\nTu tipo de cuerpo es: " + TipoCuerpo() + "\nLa distancia que debe recorrer es de: " + DistanciaDiaria() + " Km\nDistancia pendiente: Usted ha realizado la mínima diaria";
+            }
+            return mensaje;
         }
     }
 }

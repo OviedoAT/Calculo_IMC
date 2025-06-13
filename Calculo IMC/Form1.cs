@@ -21,6 +21,7 @@ namespace Calculo_IMC
 
         private void Mostrar_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 persona.estatura = float.Parse(TxtBxEstatura.Text);
@@ -37,12 +38,53 @@ namespace Calculo_IMC
             }
             catch
             {
-                MessageBox.Show("Ingrese parámetros correctos", "Calculo IMC");
+                MessageBox.Show("Rellene todos los campos", "Calculo IMC");
+            }
+        }
 
-                TxtBxEstatura.Text = "";
-                TxtBxPeso.Text = "";
-                TxtBxSancada.Text = "";
-                TxtBxPasos.Text = "";
+        private void TxtBxEstatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        } 
+
+        private void TxtBxPeso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtBxSancada_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtBxPasos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar))
+            {
+                if (e.KeyChar != (char)Keys.Back)
+                    e.Handled = true;
             }
         }
     }
